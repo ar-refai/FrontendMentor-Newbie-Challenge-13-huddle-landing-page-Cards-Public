@@ -1,2 +1,3 @@
-# FrontendMentor-Newbie-Challenge-13-huddle-landing-page-Cards-Public
-Designing A Responsive huddle-landing-page Using HTML , CSS and FlexBox
+# Frontend Mentor - Huddle landing page with single introductory section
+
+![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)

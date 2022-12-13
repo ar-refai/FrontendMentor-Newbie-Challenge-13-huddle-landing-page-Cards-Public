@@ -1,0 +1,173 @@
+/* Coded By :Abdelrahman Elrefai Tawfik */
+/* 12th Challenge as newbie @ Front End Mentor */
+
+/* Colors */
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/* Fonts */
+@font-face {
+    font-family:poppins ;
+    src: url(font/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: poppins-heavy;
+    src: url(font/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family:open-sans ;
+    src: url(font/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+
+
+/* General Rules */
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    transition:.2s;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    background-color: var(--violet);
+    background-image:url(images/bg-mobile.svg) ;
+    background-repeat:no-repeat ;
+    background-size: contain;
+    font-family:poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+}
+/* huddle container */
+.huddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:340px; 
+    margin-top:40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* the logo */
+.logo img{
+    width:150px ;
+}
+
+/* image */
+.head-img {
+    margin-top: 70px;
+}
+.head-img img {
+    width: 100%;
+}
+.huddle h1 {
+    margin-top: 60px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-family:poppins-heavy, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+
+}
+.huddle p {
+    margin-top: 20px;
+    line-height: 1.4;
+    text-align: center;
+    font-family:open-sans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: .8;
+}
+
+.huddle .button {
+    display: block;
+    width: 70%;
+    margin: 30px auto;
+    padding:15px 30px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    color:var(--violet) ;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+.huddle .button:hover{
+    background-color: var(--soft-magenta);
+    color: #fff;
+}
+.huddle .social {
+    margin-top:50px;
+    text-align: center;
+
+}
+.huddle .social a {
+    margin-right: 10px;
+}
+.social-icon {
+    filter: brightness(0) invert(100%);
+    padding: 8px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.social-icon:hover {
+    filter: invert(49%) sepia(92%) saturate(3561%) hue-rotate(255deg) brightness(94%) contrast(92%);
+
+}
+/* Responsive Medias */
+@media screen and (min-width:768px) {
+    body {
+        background-color: var(--violet);
+        background-image:url(images/bg-desktop.svg) ;
+        background-repeat:no-repeat ;
+        background-size: cover;
+        font-family:poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #ffffff;
+        
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .huddle{
+        width:70%;
+        margin: auto; 
+        margin-top: 50px;
+    }
+    .huddle-cont {
+        display: grid;
+        grid-template-columns:50% 50% ;
+    }
+    .logo img {
+        width: 200px;
+    }
+    .huddle-para {
+        display: flex;
+        flex-direction:column ;
+        width:80%;
+        margin: auto;
+    }
+    .huddle h1{
+        font-size: 40px;
+        text-align: unset;
+    }
+    .huddle p{
+        text-align: unset;
+    }
+    .huddle .button{
+        margin: 30px 0; 
+        width:40%;
+    }
+    .huddle .social{
+        margin-left: auto;
+    }
+
+
+}
