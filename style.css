@@ -42,14 +42,14 @@ body {
     background-size: contain;
     font-family:poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 /* huddle container */
 .huddle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width:340px; 
+    max-width:350px; 
     margin-top:40px;
     margin-left: auto;
     margin-right: auto;
@@ -64,7 +64,7 @@ body {
     margin-top: 70px;
 }
 .head-img img {
-    width: 100%;
+    max-width: 100%;
 }
 .huddle h1 {
     margin-top: 60px;
@@ -78,10 +78,10 @@ body {
 }
 .huddle p {
     margin-top: 20px;
-    line-height: 1.4;
+    line-height: 1.7rem;
     text-align: center;
     font-family:open-sans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 1.5;
     opacity: .8;
 }
@@ -97,6 +97,7 @@ body {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+    transition: all .4s ease;
 }
 .huddle .button:hover{
     background-color: var(--soft-magenta);
@@ -117,10 +118,11 @@ body {
     width: 40px;
     border: 1px solid #fff;
     border-radius: 50%;
+    transition:all .4s ease;
 }
 .social-icon:hover {
     filter: invert(49%) sepia(92%) saturate(3561%) hue-rotate(255deg) brightness(94%) contrast(92%);
-
+    transform: scale(1.4);
 }
 /* Responsive Medias */
 @media screen and (min-width:768px) {
@@ -128,31 +130,31 @@ body {
         background-color: var(--violet);
         background-image:url(images/bg-desktop.svg) ;
         background-repeat:no-repeat ;
-        background-size: cover;
+        background-size: contain;
         font-family:poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: #ffffff;
         
     }
+    .huddle {
+        max-width: 500px;
+    }
 }
 
-@media screen and (min-width:1440px) {
-    .huddle{
-        width:70%;
-        margin: auto; 
-        margin-top: 50px;
+@media screen and (min-width:1300px) {
+    .huddle {
+        max-width: 100%;
+        margin:100px;
     }
     .huddle-cont {
         display: grid;
-        grid-template-columns:50% 50% ;
+        grid-template-columns: 55% 45%;
+        margin-bottom: 50px;
     }
     .logo img {
         width: 200px;
     }
     .huddle-para {
-        display: flex;
-        flex-direction:column ;
-        width:80%;
-        margin: auto;
+        padding:20px;
     }
     .huddle h1{
         font-size: 40px;
